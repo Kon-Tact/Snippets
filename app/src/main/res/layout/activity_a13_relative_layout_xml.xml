@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a13_shape_grey_tile"
+    tools:context=".a1_layout_xml.A13_RelativeLayoutXml">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/a13_shape_ocean_blue_tile"
+        android:paddingStart="15dp"
+        android:text="Relative Layout"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Piet Mondrian"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/painting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <RelativeLayout
+        android:id="@+id/painting"
+        android:layout_width="267dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.244">
+
+        <RelativeLayout
+            android:id="@+id/topLittleWhiteRectangle"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:background="@drawable/a13_shape_white_tile">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomLittleWhiteRectangle"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/midLittleWhiteRectangle"
+            android:background="@drawable/a13_shape_blue_tile">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/midLittleWhiteRectangle"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/topLittleWhiteRectangle"
+            android:background="@drawable/a13_shape_white_tile">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomTinyWhiteSquare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/a13_shape_yellow_tile">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomTinyYellowSquare"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/bottomTinyWhiteSquare"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="99dp"
+            android:background="@drawable/a13_shape_white_tile">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottomWhiteRectangle"
+            android:layout_width="167dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/bottomLittleWhiteRectangle"
+            android:background="@drawable/a13_shape_white_tile">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBigRedSquare"
+            android:layout_width="207dp"
+            android:layout_height="160dp"
+            android:layout_toRightOf="@id/midLittleWhiteRectangle"
+            android:background="@drawable/a13_shape_red_tile">
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Composition en rouge, bleu et jaune"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painting"
+        app:layout_constraintVertical_bias="0.076" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

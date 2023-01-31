@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Snippets"
         tools:targetApi="31">
         <activity
+            android:name=".A13_RelativeLayoutXml"
+            android:exported="false" />
+        <activity
             android:name=".a4_media.A41_Audio_Auto"
             android:exported="false" />
         <activity
