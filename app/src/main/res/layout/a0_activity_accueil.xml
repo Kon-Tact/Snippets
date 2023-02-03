@@ -7,91 +7,147 @@
     android:textAlignment="textStart"
     tools:context=".A0_AccueilActivity">
 
+
+<!--    LES LAYOUT -->
     <TextView
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/a0_shape_accueil_a1layout_xml_titre"
+        android:background="@drawable/a0_shape_accueil_a1_layout_xml_element"
         android:padding="10dp"
         android:text="Layout XML"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <TextView
-        android:id="@+id/animations"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/a0_shape_accueil_a1animation_head"
-        android:padding="10dp"
-        android:text="Animations"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
-
-    <TextView
-        android:id="@+id/medias"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Les médias"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="602dp"
-        android:background="@drawable/a0_shape_accueil_a1layout_xml_head"
+        android:background="@drawable/a0_shape_accueil_a1_layout_xml_head"
         android:gravity="center"
         android:padding="15dp"
         android:text="Linear Layout"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/frameLayout"
         app:layout_constraintStart_toStartOf="@+id/layout"
         app:layout_constraintTop_toBottomOf="@+id/layout" />
 
     <TextView
-        android:id="@+id/loading"
+        android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="472dp"
-        android:background="@drawable/a0_shape_accueil_a1animation_element"
+        android:background="@drawable/a0_shape_accueil_a1_layout_xml_head"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Frame Layout"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/a0_shape_accueil_a1_layout_xml_head"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Relative Layout"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout" />
+
+
+
+
+<!--    LES ANIMATIONS -->
+
+    <TextView
+        android:id="@+id/animations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a0_shape_accueil_a3_animation_head"
+        android:padding="10dp"
+        android:text="Animations"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+         />
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/a0_shape_accueil_a3_animation_element"
         android:gravity="center"
         android:padding="15dp"
         android:text="Loading"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/simpsons"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animations"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/animations" />
+
+    <TextView
+        android:id="@+id/simpsons"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/a0_shape_accueil_a3_animation_element"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Simpsons"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/loading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loading"
+        app:layout_constraintTop_toTopOf="@+id/loading" />
+
+    <TextView
+        android:id="@+id/medias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/a0_shape_accueil_a4_anim_head"
+        android:padding="10dp"
+        android:text="Les médias"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loading"
+         />
+
 
     <TextView
         android:id="@+id/audioAuto"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/a0_shape_accueil_a4_anim_element"
         android:gravity="center"
-        android:padding="15dp"
+        android:padding="8dp"
         android:text="Audio Auto"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/audioControl"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/videoAuto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medias" />
@@ -99,92 +155,53 @@
     <TextView
         android:id="@+id/videoAuto"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/a0_shape_accueil_a4_anim_element"
         android:gravity="center"
-        android:padding="15dp"
+        android:padding="8dp"
         android:text="Video Auto"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/videoControl"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/audioAuto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/audioAuto"
-        app:layout_constraintTop_toBottomOf="@+id/medias" />
-
-    <TextView
-        android:id="@+id/videoControl"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="343dp"
-        android:gravity="center"
-        android:padding="15dp"
-        android:text="Video Control"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/audioControl"
-        app:layout_constraintTop_toBottomOf="@+id/audioAuto" />
+        app:layout_constraintTop_toTopOf="@+id/audioAuto" />
 
     <TextView
         android:id="@+id/audioControl"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="343dp"
+        android:layout_height="100dp"
+        android:background="@drawable/a0_shape_accueil_a4_anim_element"
         android:gravity="center"
-        android:padding="15dp"
+        android:padding="8dp"
         android:text="Audio Control"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/videoControl"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/audioAuto" />
 
     <TextView
-        android:id="@+id/simpsons"
+        android:id="@+id/videoControl"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="472dp"
-        android:background="@drawable/a0_shape_accueil_a1animation_element"
+        android:layout_height="100dp"
+        android:background="@drawable/a0_shape_accueil_a4_anim_element"
         android:gravity="center"
-        android:padding="15dp"
-        android:text="Simpsons"
+        android:padding="8dp"
+        android:text="Video Control"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/audioControl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/loading"
-        app:layout_constraintTop_toBottomOf="@+id/animations" />
+        app:layout_constraintStart_toEndOf="@+id/audioControl"
+        app:layout_constraintTop_toTopOf="@+id/audioControl" />
 
-    <TextView
-        android:id="@+id/frameLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/a0_shape_accueil_a1layout_xml_head"
-        android:gravity="center"
-        android:padding="15dp"
-        android:text="Frame Layout"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toStartOf="@+id/relativeLayout"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/layout"
-        app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/relativeLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/a0_shape_accueil_a1layout_xml_head"
-        android:gravity="center"
-        android:padding="15dp"
-        android:text="Relative Layout"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/frameLayout"
-        app:layout_constraintTop_toBottomOf="@+id/layout" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

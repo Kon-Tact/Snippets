@@ -17,11 +17,12 @@ public class A11_LinearLayoutXml extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a11_linear_layout_xml);
 
-        exemple.findViewById(R.id.exemple);
+        exemple = findViewById(R.id.exemple);
 
         exemple.setOnClickListener(v -> {
             Intent itLinearVertical = new Intent(A11_LinearLayoutXml.this,
                     A11_1_LinearVerticalActivity.class);
+            startActivity(itLinearVertical);
         });
     }
 }
